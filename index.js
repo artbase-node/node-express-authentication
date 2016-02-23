@@ -1,6 +1,10 @@
 var express = require('express');
 
+var bodyParser = require('body-parser');
+var db  = require('./db/db');
+
 var app = express();
+app.use(bodyParser.json());
 loadModules(app);
 app.listen(3000);
 
